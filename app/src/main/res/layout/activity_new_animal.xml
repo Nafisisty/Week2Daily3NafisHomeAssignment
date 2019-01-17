@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewAnimal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/nameEditTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Animal Name"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/typeEditTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Choose Type From The List"
+        android:textAlignment="center"
+        android:enabled="false"/>
+
+    <EditText
+        android:id="@+id/soundEditTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Animal Sound"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/imageEditTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Animal Image URL"
+        android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Animal Type List"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:layout_marginTop="10dp"/>
+
+    <ListView
+        android:id="@+id/animalTypeListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:divider="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/addAnimalButtonId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add new animal"
+        android:onClick="onClick"/>
+
+</LinearLayout>
