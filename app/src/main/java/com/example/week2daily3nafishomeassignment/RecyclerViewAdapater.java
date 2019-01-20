@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -56,9 +57,10 @@ public class RecyclerViewAdapater extends RecyclerView.Adapter<RecyclerViewAdapa
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView imageView;
-        TextView animalNameTextView, animalTypeTextView, animalSoundTextView;
-        Animal itemAnimal;
+        public ImageView imageView;
+        public TextView animalNameTextView, animalTypeTextView, animalSoundTextView;
+        public RelativeLayout viewBackground, viewForeground;
+        public Animal itemAnimal;
 
         public void setItemAnimal(Animal itemAnimal) {
             this.itemAnimal = itemAnimal;
@@ -71,6 +73,9 @@ public class RecyclerViewAdapater extends RecyclerView.Adapter<RecyclerViewAdapa
             animalNameTextView = itemView.findViewById(R.id.animalNameTextViewId);
             animalTypeTextView = itemView.findViewById(R.id.animalTypeTextViewId);
             animalSoundTextView = itemView.findViewById(R.id.animalSoundTextViewId);
+
+            viewBackground = itemView.findViewById(R.id.viewBackgroundId);
+            viewForeground = itemView.findViewById(R.id.viewForegroundId);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
