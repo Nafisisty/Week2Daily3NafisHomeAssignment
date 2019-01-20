@@ -10,8 +10,8 @@ Clicking an item will show item details.
 Added successfully a new animal in database.
 ![](app/src/main/res/drawable/screenshot_3.png)
 
-Updated successfully the recyclerview.
+Swapping to delete the item no. 3 from recyclerview.
 ![](app/src/main/res/drawable/screenshot_4.png)
 
-Deleted by swapping successfully.
+Deleted successfully.
 ![](app/src/main/res/drawable/screenshot_5.png)
