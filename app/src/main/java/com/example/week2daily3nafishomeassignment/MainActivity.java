@@ -3,6 +3,7 @@ package com.example.week2daily3nafishomeassignment;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemTouch
         recyclerViewAdapater = new RecyclerViewAdapater(animalArrayList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+
         recyclerView.setAdapter(recyclerViewAdapater);
 
         ItemTouchHelper.SimpleCallback itemTouchHelperCallBack = new RecyclerItemTouchHelper(0, ItemTouchHelper.LEFT, this);
@@ -66,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemTouch
 
         if(viewHolder instanceof RecyclerViewAdapater.ViewHolder) {
 
-//            String name = animalArrayList.get(viewHolder.getAdapterPosition()).getAnimalName();
 
             Animal deletedAnimal = animalArrayList.get(viewHolder.getAdapterPosition());
             int deleteIndex = viewHolder.getAdapterPosition();
